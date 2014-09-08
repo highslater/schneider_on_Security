@@ -8,6 +8,12 @@ describe "Static pages" do
       visit '/static_pages/about'
       expect(page).to have_content('About Us')
     end
+
+    it "should have the right title" do
+       visit '/static_pages/about'
+       expect(page).to have_title("Schneier on Security | About Us")
+    end
+
   end
 
 
@@ -16,6 +22,12 @@ describe "Static pages" do
       visit '/static_pages/blog'
       expect(page).to have_content('Schneier on Security')
     end
+
+   it "should have the right title" do
+       visit '/static_pages/blog'
+       expect(page).to have_title("Schneier on Security | Blog")
+    end
+
   end
 
 
@@ -24,6 +36,12 @@ describe "Static pages" do
       visit '/static_pages/books'
       expect(page).to have_content('Books')
     end
+
+   it "should have the right title" do
+       visit '/static_pages/books'
+       expect(page).to have_title("Schneier on Security | Books")
+    end
+
   end
 
 
@@ -32,6 +50,12 @@ describe "Static pages" do
       visit '/static_pages/crypto'
       expect(page).to have_content('Crypto')
     end
+
+   it "should have the right title" do
+       visit '/static_pages/crypto'
+       expect(page).to have_title("Schneier on Security | Crypto")
+    end
+
   end
 
 
@@ -40,6 +64,12 @@ describe "Static pages" do
       visit '/static_pages/essays'
       expect(page).to have_content('Essays')
     end
+
+   it "should have the right title" do
+       visit '/static_pages/essays'
+       expect(page).to have_title("Schneier on Security | Essays")
+    end
+
   end
 
 
@@ -48,6 +78,12 @@ describe "Static pages" do
       visit '/static_pages/news'
       expect(page).to have_content('News')
     end
+
+   it "should have the right title" do
+       visit '/static_pages/news'
+       expect(page).to have_title("Schneier on Security | News")
+    end
+
   end
 
 
@@ -56,6 +92,12 @@ describe "Static pages" do
       visit '/static_pages/newsletter'
       expect(page).to have_content('Newsletter')
     end
+
+   it "should have the right title" do
+       visit '/static_pages/newsletter'
+       expect(page).to have_title("Schneier on Security | Newsletter")
+    end
+
   end
 
 
@@ -64,15 +106,13 @@ describe "Static pages" do
       visit '/static_pages/schedule'
       expect(page).to have_content('Schedule')
     end
+
+   it "should have the right title" do
+       visit '/static_pages/schedule'
+       expect(page).to have_title("Schneier on Security | Schedule")
+    end
+
   end
-
-
-
-
-
-
-
-
 
 
 end

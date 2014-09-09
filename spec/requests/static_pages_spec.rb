@@ -25,7 +25,12 @@ describe "Static pages" do
 
    it "should have the right title" do
        visit '/static_pages/blog'
-       expect(page).to have_title("Schneier on Security | Blog")
+       expect(page).to have_title("Schneier on Security")
+    end
+
+    it "should not have a custom page title" do
+        visit '/static_pages/blog'
+        expect(page).not_to have_title('| Blog')
     end
 
   end

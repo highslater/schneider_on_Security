@@ -1,11 +1,11 @@
 SchneierOnSecurity::Application.routes.draw do
-  get "static_pages/blog"
-  get "static_pages/newsletter"
-  get "static_pages/books"
-  get "static_pages/essays"
-  get "static_pages/news"
-  get "static_pages/schedule"
-  get "static_pages/crypto"
-  get "static_pages/about"
+  root					'static_pages#blog'
+  match		'/newsletter',	to: 	'static_pages#newsletter', 	via: 	'get'
+  match		'/books',	to: 	'static_pages#books', 		via: 	'get'
+  match		'/essays',	to: 	'static_pages#essays', 		via: 	'get'
+  match		'/news',		to: 	'static_pages#news', 		via: 	'get'
+  match		'/schedule',	to: 	'static_pages#schedule', 	via: 	'get'
+  match		'/crypto',	to: 	'static_pages#crypto', 		via: 	'get'
+  match		'/about',	to: 	'static_pages#about', 		via: 	'get'
   
 end

@@ -4,14 +4,14 @@ describe "Static pages" do
 
 
   describe "About page" do
-    it "should have the content 'About Us'" do
-      visit '/static_pages/about'
-      expect(page).to have_content('About Us')
+    it "should have the content 'About Me'" do
+      visit about_path
+      expect(page).to have_content('About Me')
     end
 
     it "should have the right title" do
-       visit '/static_pages/about'
-       expect(page).to have_title("Schneier on Security | About Us")
+       visit about_path
+       expect(page).to have_title("Schneier on Security | About Me")
     end
 
   end
@@ -19,17 +19,17 @@ describe "Static pages" do
 
   describe "Blog page" do
     it "should have the content 'Schneier on Security'" do
-      visit '/static_pages/blog'
+      visit root_path
       expect(page).to have_content('Schneier on Security')
     end
 
    it "should have the right title" do
-       visit '/static_pages/blog'
+       visit root_path
        expect(page).to have_title("Schneier on Security")
     end
 
     it "should not have a custom page title" do
-        visit '/static_pages/blog'
+        visit root_path
         expect(page).not_to have_title('| Blog')
     end
 
@@ -38,12 +38,12 @@ describe "Static pages" do
 
    describe "Books page" do
     it "should have the content 'Books'" do
-      visit '/static_pages/books'
+      visit books_path
       expect(page).to have_content('Books')
     end
 
    it "should have the right title" do
-       visit '/static_pages/books'
+       visit books_path
        expect(page).to have_title("Schneier on Security | Books")
     end
 
@@ -52,12 +52,12 @@ describe "Static pages" do
 
   describe "Crypto page" do
     it "should have the content 'Crypto'" do
-      visit '/static_pages/crypto'
+      visit crypto_path
       expect(page).to have_content('Crypto')
     end
 
    it "should have the right title" do
-       visit '/static_pages/crypto'
+       visit crypto_path
        expect(page).to have_title("Schneier on Security | Crypto")
     end
 
@@ -66,12 +66,12 @@ describe "Static pages" do
 
   describe "Essays page" do
     it "should have the content 'Essays'" do
-      visit '/static_pages/essays'
+      visit essays_path
       expect(page).to have_content('Essays')
     end
 
    it "should have the right title" do
-       visit '/static_pages/essays'
+       visit essays_path
        expect(page).to have_title("Schneier on Security | Essays")
     end
 
@@ -80,12 +80,12 @@ describe "Static pages" do
 
   describe "News page" do
     it "should have the content 'News'" do
-      visit '/static_pages/news'
+      visit news_path
       expect(page).to have_content('News')
     end
 
    it "should have the right title" do
-       visit '/static_pages/news'
+       visit news_path
        expect(page).to have_title("Schneier on Security | News")
     end
 
@@ -94,12 +94,12 @@ describe "Static pages" do
 
   describe "Newsletter page" do
     it "should have the content 'Newsletter'" do
-      visit '/static_pages/newsletter'
+      visit newsletter_path
       expect(page).to have_content('Newsletter')
     end
 
    it "should have the right title" do
-       visit '/static_pages/newsletter'
+       visit newsletter_path
        expect(page).to have_title("Schneier on Security | Newsletter")
     end
 
@@ -108,12 +108,12 @@ describe "Static pages" do
 
   describe "Schedule page" do
     it "should have the content 'Schedule'" do
-      visit '/static_pages/schedule'
+      visit schedule_path
       expect(page).to have_content('Schedule')
     end
 
    it "should have the right title" do
-       visit '/static_pages/schedule'
+       visit schedule_path
        expect(page).to have_title("Schneier on Security | Schedule")
     end
 

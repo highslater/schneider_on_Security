@@ -1,123 +1,55 @@
 require 'spec_helper'
 
 describe "Static pages" do
-
+  subject { page }
 
   describe "About page" do
-    it "should have the content 'About Me'" do
-      visit about_path
-      expect(page).to have_content('About Me')
-    end
-
-    it "should have the right title" do
-       visit about_path
-       expect(page).to have_title("Schneier on Security | About Me")
-    end
-
+    before { visit about_path }
+    it { should have_content("About Me") }
+    it { should have_title(full_title("About Me")) }
   end
-
 
   describe "Blog page" do
-    it "should have the content 'Schneier on Security'" do
-      visit root_path
-      expect(page).to have_content('Schneier on Security')
-    end
-
-   it "should have the right title" do
-       visit root_path
-       expect(page).to have_title("Schneier on Security")
-    end
-
-    it "should not have a custom page title" do
-        visit root_path
-        expect(page).not_to have_title('| Blog')
-    end
-
+    before { visit root_path }
+    it { should have_content('Schneier on Security') }
+    it { should have_title(full_title("")) }
+    it { should_not have_title('| Blog') }
   end
-
 
    describe "Books page" do
-    it "should have the content 'Books'" do
-      visit books_path
-      expect(page).to have_content('Books')
-    end
-
-   it "should have the right title" do
-       visit books_path
-       expect(page).to have_title("Schneier on Security | Books")
-    end
-
+    before { visit books_path }
+    it { should have_content('Books') }
+    it { should have_title(full_title("Books")) }
   end
-
 
   describe "Crypto page" do
-    it "should have the content 'Crypto'" do
-      visit crypto_path
-      expect(page).to have_content('Crypto')
-    end
-
-   it "should have the right title" do
-       visit crypto_path
-       expect(page).to have_title("Schneier on Security | Crypto")
-    end
-
+    before { visit crypto_path }
+    it { should have_content('Crypto') }
+    it { should have_title(full_title("Crypto")) }
   end
-
 
   describe "Essays page" do
-    it "should have the content 'Essays'" do
-      visit essays_path
-      expect(page).to have_content('Essays')
-    end
-
-   it "should have the right title" do
-       visit essays_path
-       expect(page).to have_title("Schneier on Security | Essays")
-    end
-
+    before { visit essays_path }
+    it { should have_content('Essays') }
+    it { should have_title(full_title("Essays")) }
   end
-
 
   describe "News page" do
-    it "should have the content 'News'" do
-      visit news_path
-      expect(page).to have_content('News')
-    end
-
-   it "should have the right title" do
-       visit news_path
-       expect(page).to have_title("Schneier on Security | News")
-    end
-
+    before { visit news_path }
+    it { should have_content('News') }
+    it { should have_title(full_title("News")) }
   end
-
 
   describe "Newsletter page" do
-    it "should have the content 'Newsletter'" do
-      visit newsletter_path
-      expect(page).to have_content('Newsletter')
-    end
-
-   it "should have the right title" do
-       visit newsletter_path
-       expect(page).to have_title("Schneier on Security | Newsletter")
-    end
-
+    before { visit newsletter_path }
+    it { should have_content('Newsletter') }
+    it { should have_title(full_title("Newsletter")) }
   end
-
 
   describe "Schedule page" do
-    it "should have the content 'Schedule'" do
-      visit schedule_path
-      expect(page).to have_content('Schedule')
-    end
-
-   it "should have the right title" do
-       visit schedule_path
-       expect(page).to have_title("Schneier on Security | Schedule")
-    end
-
-  end
-
+    before { visit schedule_path }
+    it { should have_content('Schedule') }
+    it { should have_title(full_title("Schedule")) }
+   end
 
 end

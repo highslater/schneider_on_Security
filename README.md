@@ -4,7 +4,7 @@ This is a copy of the [*Schneier on Security*](https://www.schneier.com/)
 Websight.
 
 
-$ git clone git@github.com:highslater/sample_app.git
+$ git clone git@github.com:highslater/schneider_on_security.git
 
 $ bundle install --without production
 
